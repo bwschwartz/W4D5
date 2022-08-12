@@ -10,7 +10,7 @@ def second_anagram?(str1, str2) # n^2
   str2.length == 0
 end
 
-def third_anagram?(str1, str2) # n if bubble sorted
+def third_anagram?(str1, str2) # n log n
   str1.chars.sort == str2.chars.sort
 end
 
@@ -22,7 +22,7 @@ def fourth_anagram?(str1, str2) # n
   count_hash1 == count_hash2
 end
 
-def bonus?(str1, str2)
+def bonus?(str1, str2) # n
   count_hash = Hash.new(0)
   str1.chars.each { |char| count_hash[char] += 1}
   str2.chars.each { |char| count_hash[char] -= 1}
