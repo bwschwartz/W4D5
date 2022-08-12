@@ -1,18 +1,18 @@
-class MyQueue
+class MyStack
   def initialize
     @store = []
   end
 
-  def enqueue(el)
+  def push(el)
     @store << el
   end
 
-  def dequeue(el)
-    @store.shift
+  def pop
+    @store.pop
   end
 
   def peek
-    @store[0]
+    @store[-1]
   end
 
   def size
